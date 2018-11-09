@@ -1,0 +1,13 @@
+Problem demonstrates 2 principles of DP:
+
+Matrix Chain Multiplication for ABCD 
+= Min({A,BCD}, {AB,CD}, {ABC,D})
+= Min({A, Min({B,CD}, {BC,D})}, {AB,CD}, {Min({A,BC}, {AB,C}),D})
+
+
+1) Optimal Substructure
+You'll find we are breaking down the problem into similar sub problems.
+
+2) Overlapping subproblems
+You'll find that we are solving same problem more that once such as AB, BC.
+Memorization can help avoid solving the same problems again and again.
